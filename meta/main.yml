@@ -1,6 +1,6 @@
 galaxy_info:
   author: Allan Roque
-  description: Configures Chrony on RHEL with NTP servers from the Brazil National Observatory, ensuring time synchronization and active service.
+  description: Configures Chrony on RHEL with servers from the Brazil National Observatory, ensuring time synchronization and active service.
   company: Red Hat
   namespace: allanroque
   role_name: chrony
