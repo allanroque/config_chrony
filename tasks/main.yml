@@ -1,0 +1,30 @@
+---
+# tasks file for configure_chrony
+- name: Instalar o pacote Chrony
+  ansible.builtin.yum:
+    name: chrony
+    state: present
+
+- name: Deploy do arquivo de configuração do Chrony
+  ansible.builtin.copy:
+    src: chrony.conf
+    dest: /etc/chrony.conf
+    owner: root
+    group: root
+    mode: '0644'
+    backup: yes
+  notify: Restart do serviço do Chrony
+
+- name: Start do serviço do Chrony
+  ansible.builtin.systemd:
+    name: chronyd
+    state: started
+    enabled: yes
+
+- name: Verificar o status do Chrony
+  ansible.builtin.command: chronyc tracking
+  register: chrony_status
+
+- name: Exibir o status do Chrony
+  ansible.builtin.debug:
+    var: chrony_status.stdout_lines

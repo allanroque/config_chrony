@@ -1,0 +1,24 @@
+galaxy_info:
+  author: Allan Roque
+  description: Configures Chrony on RHEL with NTP servers from the Brazil National Observatory, ensuring time synchronization and active service.
+  company: Red Hat
+  namespace: allanroque
+  role_name: motd
+
+  license: MIT
+
+  min_ansible_version: 2.9
+
+  platforms:
+  - name: rhel
+    versions:
+      - 8
+      - 9
+
+  galaxy_tags:
+    - system
+    - linux
+    - chrony
+    - info
+
+dependencies: []
