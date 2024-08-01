@@ -4,7 +4,6 @@ galaxy_info:
   company: Red Hat
   namespace: allanroque
   role_name: chrony
-  version: "1.0.0"
 
   license: MIT
 
@@ -21,5 +20,4 @@ galaxy_info:
     - linux
     - chrony
     - info
-
 dependencies: []
